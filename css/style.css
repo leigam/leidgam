@@ -1,0 +1,68 @@
+:root{
+    --primary-color: white;
+    --font: 2rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;/* 1rem=10px */
+}
+
+body{
+    font-size: var(--font);
+}
+
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--primary-color);
+}
+
+main{
+    width: 100vw;
+    height: 70vh;
+    background-color: #fff;
+    display: inline-flex;
+}
+
+.section-accordion{
+    padding: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.div-flex{
+    position: relative;
+    display: flex;
+}
+.pre-code{
+    width: 50%;
+}
+.div-code{
+    width: 50%;
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+.span-ejemplo-1{
+    border-style: dashed;
+    border-width: 0.3rem;
+    padding: 1rem;
+}
+
+.imgMago{
+    height: 20rem;
+    width: 30rem;
+}
+
+footer{
+    width: 100vw;
+    height: 15vh;
+    background-color: black;
+}
