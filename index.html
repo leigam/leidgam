@@ -11,14 +11,38 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <header>
-        <h1>Accesibilidad Web</h1>
-    </header>
-    <main>
-        <section class="section-accordion">
-            <div class="accordion" id="accordionIndex"></div>
-        </section>
+    <div class="container">
+        <header>
+            <h1>Accesibilidad Web</h1>
+        </header>
+        <main role="main">
+            <div class="row">
+                <div class="col-10 offset-1">
+                  <section id="search">
+                    <label for="search-input"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Búsqueda</span></label>
+                    <input id="search-input" class="form-control input-lg" placeholder="Búsqueda" autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
+                    <span id="search-clear" class="fa fa-times-circle hide" aria-hidden="true"><span class="sr-only">Limpiar Búsqueda</span></span>
+                  </section>
+                </div>
+            </div>
 
+
+
+            <!--<div class="row">
+                <div class="col-6 offset-3 align-self-center">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2">@example.com</span>
+                    </div>
+                </div>
+            </div>-->
+            <div class="row">
+                <div class="col">
+                    <section class="section-accordion">
+                        <div class="accordion" id="accordionIndex"></div>
+                    </section>
+                </div>
+            </div>
             <script id="accordionTemplate" type="template">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="heading{{idata}}">
@@ -36,8 +60,10 @@
                         <h2>Atributo: {{attribute.name}}</h2>
                         <hr/>
                         <p>{{attribute.function}}<hr/>{{attribute.importance}}</p>
+                        <hr/><br>
                         <div class="div-flex">
                             <pre class="language-html">{{attribute.htmlTxt}}</pre>
+                            <hr/>
                             <div class="div-code">
                                 <span class="span-ejemplo-{{attribute.index}}">
                                     {{attribute.html}}
@@ -47,10 +73,11 @@
                     </div>
                 </div>
             </script>
-    </main>
-    <footer>
-        Rubén Magdiel Orduño Quiroz
-    </footer>
+        </main>
+        <!--<footer>
+            Rubén Magdiel Orduño Quiroz
+        </footer>-->
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
@@ -114,9 +141,12 @@
                         return preTag.className.substring(0, 8) === 'language';
                     }
 
-
                 });
             });
+
+            $("#search-clear").click(function(){
+                $("#search-input").val("");
+            })
             
         });
     </script>

@@ -1,6 +1,6 @@
 :root{
     --primary-color: white;
-    --font: 2rem;
+    --font: 3rem;
 }
 
 *{
@@ -9,17 +9,17 @@
     padding: 0;
 }
 
-html{
-    font-size: 62.5%;/* 1rem=10px */
+/*html{
+    font-size: 62.5%; 1rem=10px 
 }
 
 body{
     font-size: var(--font);
-}
+}*/
 
 header{
-    width: 100vw;
-    height: 25vh;
+    /*width: 100vw;
+    height: 25vh;*/
     background-color: var(--primary-color);
 }
 header h1{
@@ -29,10 +29,33 @@ header h1{
 }
 
 main{
-    width: 100vw;
-    height: 70vh;
+    /*width: 100vw;
+    height: 70vh;*/
     background-color: #fff;
-    display: inline-flex;
+    /*display: inline-flex;*/
+}
+#search {
+    position: relative;
+    font-size: 18px;
+    padding-top: 40px;
+    margin: -20px auto 0;
+}
+#search label {
+    position: absolute;
+    left: 17px;
+    top: 45px;
+}
+#search #search-input {
+    padding-left: 43px;
+    padding-right: 43px;
+    border-radius: 23px;
+}
+#search #search-clear {
+    text-decoration: none;
+    position: absolute;
+    right: 18px;
+    top: 50px;
+    color: #b3b3b3;
 }
 
 .section-accordion{
@@ -41,10 +64,10 @@ main{
     margin: 0 auto;
 }
 
-.div-flex{
+/*.div-flex{
     position: relative;
     display: flex;
-}
+}*/
 
 .span-ejemplo-1{
     border-style: dashed;
@@ -58,7 +81,7 @@ main{
 }
 
 footer{
-    width: 100vw;
+    /*width: 100vw;*/
     height: 15vh;
     background-color: black;
 }
@@ -67,6 +90,7 @@ pre[class*="language-"]{
   position: relative;
   overflow: visible;
   border-radius: 5px;
+  /*display: grid;*/
 }
 .copy{
     content: "copy";
@@ -88,4 +112,8 @@ pre[class*="language-"]{
 }
 code{
   overflow: scroll;
+}
+code[class*="language-"], pre[class*="language-"] {
+    white-space: normal !important;
+    word-break: break-word !important;
 }
