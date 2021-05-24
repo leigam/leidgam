@@ -1,0 +1,18 @@
+[
+    {"name":"label", 
+        "attribute":[{
+            "name":"for", 
+            "function": "Cuando damos click en el área del label automáticamente nos direcciona al input referenciado.",
+            "importance": "Hay software que ayudan en la lectura de texto, al llegar a un label con un input referenciado, este redirecciona automáticamente, lo que facilita el llenado de formularios a personas que utilizan este tipo de apoyo.",
+            "html":"<label for='inpName'><span>¿Cuál es tu nombre?</span><input type='text' id='inpName'></label>"
+        }]
+    },
+    {"name":"img", 
+        "attribute":[{
+            "name":"alt", 
+            "function": "Descripción gráfica de la imágen",
+            "importance": "Personas con problemas visuales pueden saber, por ejemplo, en un eCommerce una descripción de lo que muestra la imagen.",
+            "html": "<picture>\n<img class='imgMago' src='./img/magoClash.jpg' title='Mago Clash of Clans' alt='Imagen Mago Clash of Clans' />\n</picture>"
+        }]
+    }
+]
